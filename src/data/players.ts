@@ -8,7 +8,7 @@ export const players: Player[] = [
     role: "Batsman",
     nationality: "India",
     age: 30,
-    imageUrl: "/images/players/shreyas-iyer.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Shreyas+Iyer",
     bio: "KKR captain and middle-order anchor, Shreyas Iyer is known for his elegant strokeplay and calm leadership under pressure. He led KKR to the IPL 2024 title.",
   },
   {
@@ -18,7 +18,7 @@ export const players: Player[] = [
     role: "All-rounder",
     nationality: "West Indies",
     age: 36,
-    imageUrl: "/images/players/sunil-narine.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Sunil+Narine",
     bio: "Sunil Narine is a mystery spinner and explosive opener who has been KKR's match-winner for over a decade. His all-round abilities make him one of T20 cricket's most valuable players.",
   },
   {
@@ -28,7 +28,7 @@ export const players: Player[] = [
     role: "All-rounder",
     nationality: "West Indies",
     age: 36,
-    imageUrl: "/images/players/andre-russell.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Andre+Russell",
     bio: "Andre Russell is one of T20 cricket's most destructive all-rounders, capable of turning games with both bat and ball in hand. His power-hitting in the death overs is feared by all bowlers.",
   },
   {
@@ -38,7 +38,7 @@ export const players: Player[] = [
     role: "Bowler",
     nationality: "India",
     age: 33,
-    imageUrl: "/images/players/varun-chakravarthy.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Varun+Chakravarthy",
     bio: "Varun Chakravarthy is a mystery spinner with an array of unorthodox deliveries that bamboozle batsmen across all formats. He has been a vital part of KKR's bowling attack in recent seasons.",
   },
   {
@@ -48,7 +48,7 @@ export const players: Player[] = [
     role: "Batsman",
     nationality: "India",
     age: 26,
-    imageUrl: "/images/players/rinku-singh.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Rinku+Singh",
     bio: "Rinku Singh rose to fame with his extraordinary five sixes off the last five balls to win a match, showcasing his ice-cool temperament. He is one of the best finishers in modern T20 cricket.",
   },
   {
@@ -58,7 +58,7 @@ export const players: Player[] = [
     role: "All-rounder",
     nationality: "India",
     age: 29,
-    imageUrl: "/images/players/venkatesh-iyer.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Venkatesh+Iyer",
     bio: "Venkatesh Iyer is a hard-hitting left-handed opener and useful medium-fast bowler who has been a consistent performer for KKR. He adds balance to the team with his all-round capabilities.",
   },
   {
@@ -68,7 +68,7 @@ export const players: Player[] = [
     role: "Wicket-keeper",
     nationality: "England",
     age: 27,
-    imageUrl: "/images/players/phil-salt.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Phil+Salt",
     bio: "Phil Salt is an explosive wicket-keeper batsman who provides KKR with a dynamic start at the top of the order. His aggressive approach and sharp glovework make him an asset in T20 cricket.",
   },
   {
@@ -78,7 +78,7 @@ export const players: Player[] = [
     role: "Bowler",
     nationality: "India",
     age: 22,
-    imageUrl: "/images/players/harshit-rana.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Harshit+Rana",
     bio: "Harshit Rana is a young fast bowler with the ability to generate good pace and extract movement with his seam bowling. He made a strong impression in IPL 2024, earning India call-ups soon after.",
   },
   {
@@ -88,7 +88,7 @@ export const players: Player[] = [
     role: "Batsman",
     nationality: "India",
     age: 19,
-    imageUrl: "/images/players/angkrish-raghuvanshi.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Angkrish+Raghuvanshi",
     bio: "Angkrish Raghuvanshi is a promising young batsman who impressed with his maturity and strokeplay on his IPL debut. He is tipped to be one of India's batting stars of the future.",
   },
   {
@@ -98,7 +98,7 @@ export const players: Player[] = [
     role: "All-rounder",
     nationality: "England",
     age: 37,
-    imageUrl: "/images/players/moeen-ali.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Moeen+Ali",
     bio: "Moeen Ali is an experienced off-spinning all-rounder who adds international class to KKR's middle order. His ability to contribute with both bat and ball makes him a crucial squad member.",
   },
   {
@@ -108,7 +108,7 @@ export const players: Player[] = [
     role: "Wicket-keeper",
     nationality: "Afghanistan",
     age: 22,
-    imageUrl: "/images/players/rahmanullah-gurbaz.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Rahmanullah+Gurbaz",
     bio: "Rahmanullah Gurbaz is Afghanistan's explosive wicket-keeper batsman known for his attacking strokeplay at the top of the order. He is one of the most exciting young talents in world T20 cricket.",
   },
   {
@@ -118,7 +118,7 @@ export const players: Player[] = [
     role: "All-rounder",
     nationality: "India",
     age: 25,
-    imageUrl: "/images/players/ramandeep-singh.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Ramandeep+Singh",
     bio: "Ramandeep Singh is a hard-hitting middle-order batsman and useful medium pacer who has been a reliable option for KKR in tough situations. His finishing abilities make him a valuable squad member.",
   },
   {
@@ -128,7 +128,7 @@ export const players: Player[] = [
     role: "Bowler",
     nationality: "Australia",
     age: 34,
-    imageUrl: "/images/players/mitchell-starc.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Mitchell+Starc",
     bio: "Mitchell Starc is one of the world's premier fast bowlers, renowned for his left-arm swing and ability to deliver crucial wickets at key moments. KKR signed him as a marquee overseas player for IPL 2024.",
   },
   {
@@ -138,7 +138,7 @@ export const players: Player[] = [
     role: "Batsman",
     nationality: "India",
     age: 35,
-    imageUrl: "/images/players/manish-pandey.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Manish+Pandey",
     bio: "Manish Pandey is an experienced middle-order batsman who has played for multiple IPL franchises over his distinguished career. His experience and ability to anchor innings make him a reliable squad option.",
   },
   {
@@ -148,7 +148,7 @@ export const players: Player[] = [
     role: "Bowler",
     nationality: "India",
     age: 21,
-    imageUrl: "/images/players/suyash-sharma.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Suyash+Sharma",
     bio: "Suyash Sharma is a leg-spin bowler who burst onto the IPL scene with impressive performances, earning praise for his ability to pick wickets in the middle overs. He is seen as a future star in Indian cricket.",
   },
   {
@@ -158,7 +158,7 @@ export const players: Player[] = [
     role: "Bowler",
     nationality: "Australia",
     age: 27,
-    imageUrl: "/images/players/spencer-johnson.jpg",
+    imageUrl: "https://placehold.co/400x500/3A1078/FFD700?text=Spencer+Johnson",
     bio: "Spencer Johnson is a left-arm fast bowler who has impressed with his pace and ability to take wickets at the death. He adds valuable overseas firepower to KKR's bowling attack.",
   },
 ];
