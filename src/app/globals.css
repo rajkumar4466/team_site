@@ -10,6 +10,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* KKR Brand Colors */
+  --color-kkr-purple: #3A1078;
+  --color-kkr-purple-light: #5B2EA6;
+  --color-kkr-purple-dark: #260B52;
+  --color-kkr-gold: #FFD700;
 }
 
 @media (prefers-color-scheme: dark) {
