@@ -16,6 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Players** - Squad listing and individual player profile pages (completed 2026-02-25)
 - [x] **Phase 3: Stats and Gallery** - Season records, top performers, and player action photo gallery (completed 2026-02-25)
 - [ ] **Phase 4: Player Comments and Sentiment** - Anonymous commenting on player profiles with AI-powered sentiment classification and visual summary badges
+- [ ] **Phase 5: Data Accuracy and Real Assets** - Replace placeholder stats and photos with real data scraped via Playwright and actual player/gallery images
 
 ## Phase Details
 
@@ -63,6 +64,23 @@ Plans:
 - [x] 03-03-PLAN.md — Gallery page only: /gallery with player photo grids
 - [x] 03-04-PLAN.md — Human verification of /stats and /gallery pages
 
+### Phase 5: Data Accuracy and Real Assets
+**Goal**: Replace all placeholder stats and images with real, accurate data — scraped via Playwright from official IPL sources and real player/gallery photos
+**Depends on**: Phase 3 (stats and gallery pages exist)
+**Requirements**: DATA-01, DATA-02, PHOTO-01, PHOTO-02
+**Success Criteria** (what must be TRUE):
+  1. Season-by-season KKR records (wins, losses, titles) match official IPL history
+  2. All-time top performers (run-scorers, wicket-takers) reflect accurate official IPL statistics
+  3. Every player tile and profile page shows a real player photograph (not a placeholder)
+  4. Gallery page displays real KKR action photographs (not placeholder background colors)
+**Plans**: 4 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — Install Playwright + write season records and top performers scraping scripts
+- [ ] 05-02-PLAN.md — Run scraping scripts, checkpoint for human JSON review and data verification
+- [ ] 05-03-PLAN.md — Source Wikimedia Commons CC-licensed photos, update players.ts and gallery.ts
+- [ ] 05-04-PLAN.md — Apply verified stats corrections to stats.ts + final build + human verification
+
 ### Phase 4: Player Comments and Sentiment
 **Goal**: Users can comment on any player profile and see a live sentiment breakdown (positive/negative/neutral) powered by HuggingFace BERT classification
 **Depends on**: Phase 2 (player profiles)
@@ -82,7 +100,7 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -90,3 +108,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 2. Players | 2/2 | Complete   | 2026-02-25 |
 | 3. Stats and Gallery | 4/4 | Complete   | 2026-02-25 |
 | 4. Player Comments and Sentiment | 2/3 | In Progress| |
+| 5. Data Accuracy and Real Assets | 0/4 | Planned | |
