@@ -75,8 +75,8 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Remove static export, create Comment types + in-memory store + /api/comments Route Handler with HuggingFace classification
-- [ ] 04-02-PLAN.md — CommentSection client component + integrate into player profile page
+- [x] 04-01-PLAN.md — Remove static export, create Comment types + in-memory store + /api/comments Route Handler with HuggingFace classification
+- [x] 04-02-PLAN.md — CommentSection client component + integrate into player profile page
 - [ ] 04-03-PLAN.md — Human verification of commenting, sentiment classification, and badge display
 
 ## Progress
@@ -89,4 +89,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 2/2 | Complete   | 2026-02-25 |
 | 2. Players | 2/2 | Complete   | 2026-02-25 |
 | 3. Stats and Gallery | 4/4 | Complete   | 2026-02-25 |
-| 4. Player Comments and Sentiment | 1/3 | In Progress|  |
+| 4. Player Comments and Sentiment | 2/3 | In Progress| |
