@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-02-25T20:43:44.524Z"
+status: in-progress
+last_updated: "2026-02-26T03:10:43Z"
 progress:
-  total_phases: 3
+  total_phases: 4
   completed_phases: 3
-  total_plans: 8
-  completed_plans: 8
+  total_plans: 9
+  completed_plans: 9
 ---
 
 # Project State
@@ -18,23 +18,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-02-25)
 
 **Core value:** Fans can discover everything about KKR — squad profiles, season stats, and player action photos — in one polished, on-brand destination.
-**Current focus:** Phase 3 - Stats and Gallery
+**Current focus:** Phase 4 - Player Comments and Sentiment
 
 ## Current Position
 
-Phase: 3 of 3 (Stats and Gallery) — COMPLETE
-Plan: 4 of 4 in current phase — COMPLETE
-Status: All phases complete — KKR fan site v1.0 milestone delivered and human-verified
-Last activity: 2026-02-25 — 03-04 complete: Human verification of /stats and /gallery — all requirements approved
+Phase: 4 of 4 (Player Comments and Sentiment) — IN PROGRESS
+Plan: 1 of 1 in current phase — COMPLETE
+Status: Phase 4 plan 01 complete — comment API infrastructure built and verified
+Last activity: 2026-02-26 — 04-01 complete: comment types, in-memory store, and /api/comments Route Handler with HuggingFace sentiment
 
 Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
+- Total plans completed: 9
 - Average duration: 1.9 min
-- Total execution time: 15 min
+- Total execution time: 17 min
 
 **By Phase:**
 
@@ -43,6 +43,7 @@ Progress: [██████████] 100%
 | 01-foundation | 2 | 5 min | 2.5 min |
 | 02-players | 2 | 5 min | 2.5 min |
 | 03-stats-and-gallery | 4 | 7 min | 1.75 min |
+| 04-player-comments-and-sentiment | 1 | 2 min | 2 min |
 
 **Recent Trend:**
 - Last 5 plans: 3 min, 2 min, 2 min, 3 min, 2 min
@@ -77,6 +78,11 @@ Recent decisions affecting current work:
 - [Phase 03-stats-and-gallery]: IPL Champion gold badge shown in Result column for title-winning seasons (2012, 2014, 2024); other years show gray text
 - [Phase 03-stats-and-gallery]: Gallery page is a pure server component importing galleryEntries via @/data/gallery
 - [Phase 03-stats-and-gallery]: Photo cards use bg-kkr-purple-light on img tag as intentional brand-color placeholder since images are not on disk
+- [Phase 04-player-comments-and-sentiment]: Removed output: 'export' from next.config.ts — static export blocks POST Route Handlers; pages retain static optimization via generateStaticParams
+- [Phase 04-player-comments-and-sentiment]: In-memory Map store (not database) — acceptable for demo/dev fan site; data resets on server restart
+- [Phase 04-player-comments-and-sentiment]: HuggingFace API key is server-side only — read from process.env.HUGGINGFACE_API_KEY, never exposed to browser
+- [Phase 04-player-comments-and-sentiment]: Use lxyuan/distilbert-base-multilingual-cased-sentiments-student — NOT rajkumar4466/bert-sentiment-classifier (not deployed on HF Inference API)
+- [Phase 04-player-comments-and-sentiment]: Cold start 503 returns user-friendly error with estimated_time; other HF failures fall back to 'neutral' sentiment rather than rejecting comment
 
 ### Pending Todos
 
@@ -88,6 +94,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-25
-Stopped at: Completed 03-04-PLAN.md — KKR fan site v1.0 milestone fully delivered and human-verified
+Last session: 2026-02-26
+Stopped at: Completed 04-01-PLAN.md — comment API infrastructure with HuggingFace sentiment classification
 Resume file: None

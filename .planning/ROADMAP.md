@@ -89,4 +89,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 1. Foundation | 2/2 | Complete   | 2026-02-25 |
 | 2. Players | 2/2 | Complete   | 2026-02-25 |
 | 3. Stats and Gallery | 4/4 | Complete   | 2026-02-25 |
-| 4. Player Comments and Sentiment | 0/3 | Planned | — |
+| 4. Player Comments and Sentiment | 1/3 | In Progress|  |

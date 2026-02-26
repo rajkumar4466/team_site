@@ -44,6 +44,13 @@ Deferred to future release. Tracked but not in current roadmap.
 
 - **GALL-02**: User can click a photo to view it full-screen (lightbox)
 
+### Player Comments & Sentiment
+
+- [x] **COMM-01**: User (no login required) can submit a text comment on any player's profile page
+- [x] **COMM-02**: Each submitted comment is classified as positive, negative, or neutral via the BERT sentiment classifier at rajkumar4466/bert-sentiment-classifier (HuggingFace Inference API)
+- [ ] **COMM-03**: Player profile page shows a comment form and the list of existing comments with their sentiment label
+- [ ] **COMM-04**: Below each player's profile photo, display a sentiment summary badge showing counts of positive (green), negative (red), and neutral (grey) comments
+
 ## Out of Scope
 
 Explicitly excluded. Documented to prevent scope creep.
@@ -51,7 +58,7 @@ Explicitly excluded. Documented to prevent scope creep.
 | Feature | Reason |
 |---------|--------|
 | Live match scores / real-time data | High complexity, API costs, not core to fan info site |
-| User accounts / community features | Out of v1 scope |
+| User accounts / community features | Out of v1 scope (Phase 4 allows anonymous comments) |
 | Ticket purchasing | Not a transactional site |
 | Mobile app | Web-first; mobile site via responsive design |
 
@@ -70,10 +77,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | STAT-01 | Phase 3 | Complete |
 | STAT-02 | Phase 3 | Complete |
 | GALL-01 | Phase 3 | Complete |
+| COMM-01 | Phase 4 | Planned |
+| COMM-02 | Phase 4 | Planned |
+| COMM-03 | Phase 4 | Planned |
+| COMM-04 | Phase 4 | Planned |
 
 **Coverage:**
-- v1 requirements: 9 total
-- Mapped to phases: 9
+- v1 requirements: 13 total
+- Mapped to phases: 13
 - Unmapped: 0
 
 ---
