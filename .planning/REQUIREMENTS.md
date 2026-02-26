@@ -47,9 +47,16 @@ Deferred to future release. Tracked but not in current roadmap.
 ### Player Comments & Sentiment
 
 - [x] **COMM-01**: User (no login required) can submit a text comment on any player's profile page
-- [x] **COMM-02**: Each submitted comment is classified as positive, negative, or neutral via the BERT sentiment classifier at rajkumar4466/bert-sentiment-classifier (HuggingFace Inference API)
+- [x] **COMM-02**: Each submitted comment is classified as positive, negative, or neutral via the sentiment classifier at cardiffnlp/twitter-roberta-base-sentiment-latest (HuggingFace Inference API)
 - [x] **COMM-03**: Player profile page shows a comment form and the list of existing comments with their sentiment label
 - [x] **COMM-04**: Below each player's profile photo, display a sentiment summary badge showing counts of positive (green), negative (red), and neutral (grey) comments
+
+### Data Accuracy and Real Assets
+
+- [ ] **DATA-01**: Season-by-season record data is accurate and sourced from official IPL statistics (via Playwright scraping)
+- [ ] **DATA-02**: All-time top KKR run-scorers and wicket-takers data is accurate and sourced from official IPL statistics (via Playwright scraping)
+- [ ] **PHOTO-01**: Player profile pages and squad tiles display real player photographs
+- [ ] **PHOTO-02**: Gallery page displays real action photographs of KKR players
 
 ## Out of Scope
 
@@ -81,10 +88,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | COMM-02 | Phase 4 | Complete |
 | COMM-03 | Phase 4 | Complete |
 | COMM-04 | Phase 4 | Complete |
+| DATA-01 | Phase 5 | Planned |
+| DATA-02 | Phase 5 | Planned |
+| PHOTO-01 | Phase 5 | Planned |
+| PHOTO-02 | Phase 5 | Planned |
 
 **Coverage:**
-- v1 requirements: 13 total
-- Mapped to phases: 13
+- v1 requirements: 17 total
+- Mapped to phases: 17
 - Unmapped: 0
 
 ---

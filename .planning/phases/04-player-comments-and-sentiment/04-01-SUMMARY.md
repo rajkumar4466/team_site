@@ -20,7 +20,7 @@ affects:
 
 # Tech tracking
 tech-stack:
-  added: [HuggingFace Inference API (lxyuan/distilbert-base-multilingual-cased-sentiments-student)]
+  added: [HuggingFace Inference API (cardiffnlp/twitter-roberta-base-sentiment-latest)]
   patterns:
     - Server-side only API key usage via process.env in Route Handlers
     - Module-level Map as in-memory store (persists across requests, resets on restart)
@@ -40,7 +40,7 @@ key-decisions:
   - "Removed output: 'export' from next.config.ts — static export blocks POST Route Handlers; pages retain static optimization via generateStaticParams"
   - "In-memory Map store (not database) — acceptable for demo/dev fan site; data resets on server restart"
   - "HuggingFace API key is server-side only — read from process.env.HUGGINGFACE_API_KEY, never exposed to browser"
-  - "Use lxyuan/distilbert-base-multilingual-cased-sentiments-student — NOT rajkumar4466/bert-sentiment-classifier (not deployed on HF Inference API)"
+  - "Use cardiffnlp/twitter-roberta-base-sentiment-latest (HF Inference API via router.huggingface.co)"
   - "Cold start 503 returns user-friendly error with estimated_time; other HF failures fall back to 'neutral' sentiment rather than rejecting comment"
 
 patterns-established:
@@ -87,7 +87,7 @@ Each task was committed atomically:
 - `.env.local.example` - Documents `HUGGINGFACE_API_KEY` with token generation URL
 
 ## Decisions Made
-- Used `lxyuan/distilbert-base-multilingual-cased-sentiments-student` as specified — this model is deployed on HF Inference API (serverless), unlike `rajkumar4466/bert-sentiment-classifier`
+- Used `cardiffnlp/twitter-roberta-base-sentiment-latest` — deployed on HF Inference API via router.huggingface.co
 - HF cold start (503 + `estimated_time`) returns a 503 to the client with a user-friendly message rather than silently falling back, since the caller needs to know to retry
 - All other HF failures (network error, non-503 error) fall back to `"neutral"` sentiment so the comment is still stored
 

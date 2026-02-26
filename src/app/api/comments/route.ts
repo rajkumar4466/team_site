@@ -3,7 +3,7 @@ import { addComment, getCommentsByPlayer } from "@/data/comments";
 import type { Sentiment } from "@/types/comment";
 
 const HF_MODEL_URL =
-  "https://api-inference.huggingface.co/models/lxyuan/distilbert-base-multilingual-cased-sentiments-student";
+  "https://router.huggingface.co/hf-inference/models/cardiffnlp/twitter-roberta-base-sentiment-latest";
 
 // GET /api/comments?playerId=rohit-sharma
 export async function GET(request: NextRequest) {
@@ -55,9 +55,17 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify({ inputs: text.trim() }),
     });
 
+    const rawBody = await hfResponse.text();
+
     // Handle cold start: HF returns 503 with estimated_time when model is loading
     if (hfResponse.status === 503) {
-      const errBody = await hfResponse.json().catch(() => ({}));
+      const errBody = (() => {
+        try {
+          return JSON.parse(rawBody || "{}");
+        } catch {
+          return {};
+        }
+      })();
       if ("estimated_time" in errBody) {
         return NextResponse.json(
           {
@@ -71,11 +79,13 @@ export async function POST(request: NextRequest) {
     }
 
     if (hfResponse.ok) {
-      // Response shape: [[{label: string, score: number}, ...]]
-      // Outer array = batch; [0] = first (only) input's scores
-      const hfData: Array<Array<{ label: string; score: number }>> =
-        await hfResponse.json();
-      const scores = hfData[0];
+      const hfData = JSON.parse(rawBody);
+      // HF API can return:
+      // - [[{label, score}, ...]] (batch with all class scores)
+      // - [{label, score}] (single top prediction)
+      const scores: Array<{ label: string; score: number }> = Array.isArray(hfData[0])
+        ? hfData[0]
+        : hfData;
       const winner = scores.reduce((a, b) => (a.score > b.score ? a : b));
       const label = winner.label.toLowerCase();
       if (label === "positive" || label === "negative" || label === "neutral") {

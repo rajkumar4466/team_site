@@ -87,7 +87,7 @@ Plans:
 **Requirements**: COMM-01, COMM-02, COMM-03, COMM-04
 **Success Criteria** (what must be TRUE):
   1. User can submit a text comment on any player profile page without logging in
-  2. Comment is classified as positive, negative, or neutral via lxyuan/distilbert-base-multilingual-cased-sentiments-student (HuggingFace Inference API)
+  2. Comment is classified as positive, negative, or neutral via cardiffnlp/twitter-roberta-base-sentiment-latest (HuggingFace Inference API)
   3. Comments and their sentiment labels appear on the player profile page
   4. Below the player's profile photo, a sentiment badge shows green/red/grey counts for positive/negative/neutral comments
 **Plans**: 3 plans

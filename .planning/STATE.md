@@ -81,7 +81,7 @@ Recent decisions affecting current work:
 - [Phase 04-player-comments-and-sentiment]: Removed output: 'export' from next.config.ts — static export blocks POST Route Handlers; pages retain static optimization via generateStaticParams
 - [Phase 04-player-comments-and-sentiment]: In-memory Map store (not database) — acceptable for demo/dev fan site; data resets on server restart
 - [Phase 04-player-comments-and-sentiment]: HuggingFace API key is server-side only — read from process.env.HUGGINGFACE_API_KEY, never exposed to browser
-- [Phase 04-player-comments-and-sentiment]: Use lxyuan/distilbert-base-multilingual-cased-sentiments-student — NOT rajkumar4466/bert-sentiment-classifier (not deployed on HF Inference API)
+- [Phase 04-player-comments-and-sentiment]: Use cardiffnlp/twitter-roberta-base-sentiment-latest (HF Inference API via router.huggingface.co)
 - [Phase 04-player-comments-and-sentiment]: Cold start 503 returns user-friendly error with estimated_time; other HF failures fall back to 'neutral' sentiment rather than rejecting comment
 - [Phase 04-player-comments-and-sentiment]: CommentSection placed as full-width sibling after hero grid closing div — NOT nested inside either column
 - [Phase 04-player-comments-and-sentiment]: Sentiment badge at top of CommentSection so it appears visually below the photo; no timestamps in comment list; no pagination (deferred)
