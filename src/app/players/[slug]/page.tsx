@@ -1,7 +1,8 @@
 import { players, getPlayerBySlug } from "@/data/players";
 import { notFound } from "next/navigation";
+import { CommentSection } from "@/components/CommentSection";
 
-// Required for static export — generates one HTML file per player at build time
+// Pre-renders known player slugs at build time for fast initial load
 export function generateStaticParams() {
   return players.map((player) => ({ slug: player.id }));
 }
@@ -95,6 +96,9 @@ export default async function PlayerPage({
           </div>
         </div>
       </div>
+
+      {/* Comments and sentiment — full width below the hero grid */}
+      <CommentSection playerId={slug} />
     </div>
   );
 }
