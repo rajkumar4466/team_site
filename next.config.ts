@@ -1,10 +1,12 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  // output: 'export' removed — Phase 4 requires POST Route Handlers for comment submission
+  // and server-side HuggingFace API calls. The existing pages still use generateStaticParams
+  // and will be statically optimized by Next.js automatically.
   trailingSlash: true,
   images: {
-    unoptimized: true, // Required for static export (no Next.js image server)
+    unoptimized: true,
   },
 }
 
