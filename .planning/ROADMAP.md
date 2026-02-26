@@ -15,6 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - Branded site shell with navigation and responsive layout (completed 2026-02-25)
 - [x] **Phase 2: Players** - Squad listing and individual player profile pages (completed 2026-02-25)
 - [x] **Phase 3: Stats and Gallery** - Season records, top performers, and player action photo gallery (completed 2026-02-25)
+- [ ] **Phase 4: Player Comments and Sentiment** - Anonymous commenting on player profiles with AI-powered sentiment classification and visual summary badges
 
 ## Phase Details
 
@@ -60,15 +61,32 @@ Plans:
 - [x] 03-01-PLAN.md — Stats and gallery type definitions + static data (season records, top performers, gallery entries)
 - [x] 03-02-PLAN.md — Stats page only: /stats with season table + top performers section
 - [x] 03-03-PLAN.md — Gallery page only: /gallery with player photo grids
-- [ ] 03-04-PLAN.md — Human verification of /stats and /gallery pages
+- [x] 03-04-PLAN.md — Human verification of /stats and /gallery pages
+
+### Phase 4: Player Comments and Sentiment
+**Goal**: Users can comment on any player profile and see a live sentiment breakdown (positive/negative/neutral) powered by HuggingFace BERT classification
+**Depends on**: Phase 2 (player profiles)
+**Requirements**: COMM-01, COMM-02, COMM-03, COMM-04
+**Success Criteria** (what must be TRUE):
+  1. User can submit a text comment on any player profile page without logging in
+  2. Comment is classified as positive, negative, or neutral via lxyuan/distilbert-base-multilingual-cased-sentiments-student (HuggingFace Inference API)
+  3. Comments and their sentiment labels appear on the player profile page
+  4. Below the player's profile photo, a sentiment badge shows green/red/grey counts for positive/negative/neutral comments
+**Plans**: 3 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Remove static export, create Comment types + in-memory store + /api/comments Route Handler with HuggingFace classification
+- [ ] 04-02-PLAN.md — CommentSection client component + integrate into player profile page
+- [ ] 04-03-PLAN.md — Human verification of commenting, sentiment classification, and badge display
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3
+Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete   | 2026-02-25 |
 | 2. Players | 2/2 | Complete   | 2026-02-25 |
 | 3. Stats and Gallery | 4/4 | Complete   | 2026-02-25 |
+| 4. Player Comments and Sentiment | 0/3 | Planned | — |
